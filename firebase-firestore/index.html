@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+    <title>FireBase FireStore</title>
+  </head>
+  <body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" placeholder="Cafe Name">
+        <input type="text" name="city" placeholder="Cafe City">
+        <button>Add Cafe</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBshKSL1NDVThgETsgb2nUVYWwFa_u3stE",
+        authDomain: "ninja-firestore-cafe-4e2b9.firebaseapp.com",
+        databaseURL: "https://ninja-firestore-cafe-4e2b9.firebaseio.com",
+        projectId: "ninja-firestore-cafe-4e2b9",
+        storageBucket: "ninja-firestore-cafe-4e2b9.appspot.com",
+        messagingSenderId: "489038047020",
+        appId: "1:489038047020:web:30bf93f17ef7287d9bee89",
+        measurementId: "G-RGND4GKNHX"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
